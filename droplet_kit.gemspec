@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'virtus', '~> 1.0.3'
   spec.add_dependency "resource_kit", '~> 0.1.5'
   spec.add_dependency "kartograph", '~> 0.2.3'
-  spec.add_dependency "faraday", '~> 0.15'
+  spec.add_dependency "faraday", '>= 1.0.0'
 
   spec.add_development_dependency "bundler", ">= 2.1.2"
   spec.add_development_dependency "rake"
