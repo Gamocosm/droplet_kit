@@ -11,7 +11,9 @@ module ErrorHandlingResourcable
           error.reset_at = response.headers['RateLimit-Reset']
           raise error
         else
-          raise DropletKit::Error.new("#{response.status}: #{response.body}")
+          error = DropletKit::HttpStatusError.new("#{response.status}: #{response.body}")
+          error.status = response.status
+          raise error
         end
       end
     end

@@ -175,4 +175,8 @@ module DropletKit
       @remaining.to_i if @remaining
     end
   end
+
+  class HttpStatusError < DropletKit::Error
+    attr_accessor :status
+  end
 end
